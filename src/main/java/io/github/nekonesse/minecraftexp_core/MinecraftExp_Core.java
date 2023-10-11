@@ -1,6 +1,7 @@
 package io.github.nekonesse.minecraftexp_core;
 
 import io.github.nekonesse.minecraftexp_core.item.ModItems;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.slf4j.Logger;

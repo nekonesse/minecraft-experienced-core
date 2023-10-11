@@ -3,6 +3,7 @@ package io.github.nekonesse.minecraftexp_core.item;
 import io.github.nekonesse.minecraftexp_core.MinecraftExp_Core;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.entity.vehicle.MinecartEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -12,6 +13,8 @@ import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 public class ModItems {
 	public static final Item COPPER_NUGGET = registerItem("copper_nugget", new Item(new QuiltItemSettings()));
+
+	public static final Item SHORTBOW = registerItem("shortbow", new Item(new QuiltItemSettings()));
 	private static Item registerItem(String name, Item item) {
 		return Registry.register(Registries.ITEM, new Identifier(MinecraftExp_Core.MOD_ID, name), item);
 	}
