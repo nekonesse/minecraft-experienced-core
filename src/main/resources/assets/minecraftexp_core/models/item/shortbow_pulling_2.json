@@ -1,0 +1,6 @@
+{
+    "parent": "minecraftexp_core:item/shortbow",
+    "textures": {
+        "layer0": "minecraftexp_core:item/shortbow_pulling_2"
+    }
+}

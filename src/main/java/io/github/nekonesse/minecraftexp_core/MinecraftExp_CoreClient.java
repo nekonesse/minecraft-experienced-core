@@ -1,5 +1,6 @@
 package io.github.nekonesse.minecraftexp_core;
 
+import io.github.nekonesse.minecraftexp_core.item.ModModelPredicateProvider;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.client.ClientModInitializer;
 
@@ -9,6 +10,6 @@ public class MinecraftExp_CoreClient implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient(ModContainer mod) {
-
+		ModModelPredicateProvider.registerModModels();
 	}
 }
