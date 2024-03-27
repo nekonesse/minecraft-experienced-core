@@ -19,7 +19,8 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "io.github.nekonesse.minecraftexp_core.MinecraftExp_Core"
+			"init": "io.github.nekonesse.minecraftexp_core.MinecraftExp_Core",
+			"client_init": "io.github.nekonesse.minecraftexp_core.MinecraftExp_CoreClient"
 		},
 		"depends": [
 			{

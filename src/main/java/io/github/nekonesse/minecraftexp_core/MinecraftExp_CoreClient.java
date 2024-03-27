@@ -1,6 +1,6 @@
 package io.github.nekonesse.minecraftexp_core;
 
-import io.github.nekonesse.minecraftexp_core.item.ModModelPredicateProvider;
+import io.github.nekonesse.minecraftexp_core.util.ModModelPredicateProvider;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.client.ClientModInitializer;
 
