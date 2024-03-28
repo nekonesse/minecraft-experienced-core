@@ -1,0 +1,6 @@
+{
+    "parent": "minecraftexp_core:item/longbow",
+    "textures": {
+        "layer0": "minecraftexp_core:item/longbow_pulling_0"
+    }
+}

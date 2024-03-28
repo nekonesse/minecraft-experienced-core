@@ -14,8 +14,9 @@ import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 public class ModItems {
 	public static final Item COPPER_NUGGET = registerItem("copper_nugget", new Item(new QuiltItemSettings()));
+	public static final Item SHORTBOW = registerItem("shortbow", new ShortBowItem(new QuiltItemSettings().maxDamage(640)));
+	public static final Item LONGBOW = registerItem("longbow", new LongBowItem(new QuiltItemSettings().maxDamage(640)));
 
-	public static final Item SHORTBOW = registerItem("shortbow", new BowItem(new QuiltItemSettings().maxDamage(640)));
 	private static Item registerItem(String name, Item item) {
 		return Registry.register(Registries.ITEM, new Identifier(MinecraftExp_Core.MOD_ID, name), item);
 	}

@@ -8,6 +8,7 @@ import net.minecraft.util.Identifier;
 public class ModModelPredicateProvider {
 	public static void registerModModels() {
 		registerBow(ModItems.SHORTBOW);
+		registerBow(ModItems.LONGBOW);
 	}
 
 	private static void registerBow(Item bow) {
