@@ -1,5 +1,7 @@
 {
 	"item.minecraftexp_core.copper_nugget": "Copper Nugget",
   "item.minecraftexp_core.shortbow": "Shortbow",
-  "item.minecraftexp_core.longbow": "Longbow"
+  "item.minecraftexp_core.longbow": "Longbow",
+
+  "block.minecraftexp_core.cracked_polished_andesite": "Cracked Polished Andesite"
 }

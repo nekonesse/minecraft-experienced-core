@@ -20,7 +20,9 @@
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
 			"init": "io.github.nekonesse.minecraftexp_core.MinecraftExp_Core",
-			"client_init": "io.github.nekonesse.minecraftexp_core.MinecraftExp_CoreClient"
+			"client_init": "io.github.nekonesse.minecraftexp_core.MinecraftExp_CoreClient",
+			"fabric-datagen": "io.github.nekonesse.minecraftexp_core.MinecraftExp_CoreDataGenerator",
+			"datagen": "io.github.nekonesse.minecraftexp_core.MinecraftExp_CoreDataGenerator"
 		},
 		"depends": [
 			{

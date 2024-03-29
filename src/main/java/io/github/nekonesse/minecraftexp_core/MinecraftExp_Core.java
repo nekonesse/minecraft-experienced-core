@@ -1,5 +1,6 @@
 package io.github.nekonesse.minecraftexp_core;
 
+import io.github.nekonesse.minecraftexp_core.block.ModBlocks;
 import io.github.nekonesse.minecraftexp_core.item.ModItems;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import org.quiltmc.loader.api.ModContainer;
@@ -14,6 +15,7 @@ public class MinecraftExp_Core implements ModInitializer {
 	@Override
 	public void onInitialize(ModContainer mod) {
 		ModItems.registerModItems();
+		ModBlocks.registerModBlock();
 	}
 }
 
