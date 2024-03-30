@@ -6,10 +6,10 @@ import net.minecraft.client.render.entity.model.MinecartEntityModel;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 
-//Change minecart model cuz newer is BETTER! ((also this took me 24 fucking hours of debugging im so tired LOL
 @Mixin(MinecartEntityModel.class)
 public abstract class MinecartOverwriteModel extends EntityModel {
 	@Overwrite
+	//Change minecart model cuz newer is BETTER! ((also this took me 24 fucking hours of debugging im so tired LOL
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
 		ModelPartData modelPartData = modelData.getRoot();

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraftexp_core:cracked_polished_andesite",
+    "minecraftexp_core:polished_netherrack",
+    "minecraftexp_core:polished_netherrack_stairs",
+    "minecraftexp_core:polished_netherrack_slab",
+    "minecraftexp_core:polished_netherrack_wall",
+    "minecraftexp_core:polished_netherrack_pillar",
+    "minecraftexp_core:layered_polished_netherrack",
+    "minecraftexp_core:cut_polished_netherrack",
+    "minecraftexp_core:polished_andesite_wall"
+  ]
+}

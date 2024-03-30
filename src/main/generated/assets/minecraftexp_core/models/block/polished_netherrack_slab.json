@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "minecraftexp_core:block/polished_netherrack",
+    "side": "minecraftexp_core:block/polished_netherrack",
+    "top": "minecraftexp_core:block/polished_netherrack"
+  }
+}

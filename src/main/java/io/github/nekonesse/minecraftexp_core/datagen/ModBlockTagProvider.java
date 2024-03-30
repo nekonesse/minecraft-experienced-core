@@ -18,7 +18,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
 	@Override
 	protected void configure(HolderLookup.Provider arg) {
-		getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE);
+		getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+			.add(ModBlocks.CRACKED_POLISHED_ANDESITE)
+			.add(ModBlocks.POLISHED_NETHERRACK)
+			.add(ModBlocks.POLISHED_NETHERRACK_STAIRS)
+			.add(ModBlocks.POLISHED_NETHERRACK_SLAB)
+			.add(ModBlocks.POLISHED_NETHERRACK_WALL)
+			.add(ModBlocks.POLISHED_NETHERRACK_PILLAR)
+			.add(ModBlocks.LAYERED_POLISHED_NETHERRACK)
+			.add(ModBlocks.CUT_POLISHED_NETHERRACK)
+			.add(ModBlocks.POLISHED_ANDESITE_WALL);
 
 		getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL);
 
@@ -27,5 +36,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 		getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL);
 
 		getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_4")));
+
+		getOrCreateTagBuilder(BlockTags.WALLS)
+			.add(ModBlocks.POLISHED_ANDESITE_WALL)
+			.add(ModBlocks.POLISHED_NETHERRACK_WALL);
 	}
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "minecraftexp_core:block/polished_netherrack_pillar_top",
+    "side": "minecraftexp_core:block/polished_netherrack_pillar"
+  }
+}

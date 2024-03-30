@@ -7,6 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.data.server.loot_table.BlockLootTableGenerator;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
@@ -23,6 +24,16 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 	@Override
 	public void generate() {
 		addDrop(ModBlocks.CRACKED_POLISHED_ANDESITE);
+		addDrop(ModBlocks.POLISHED_ANDESITE_WALL);
+		addDrop(ModBlocks.POLISHED_NETHERRACK);
+		addDrop(ModBlocks.POLISHED_NETHERRACK_STAIRS);
+		addDrop(ModBlocks.POLISHED_NETHERRACK_WALL);
+		add(ModBlocks.POLISHED_NETHERRACK_SLAB, block -> slabDrops(block));
+		addDrop(ModBlocks.POLISHED_NETHERRACK_PILLAR);
+		addDrop(ModBlocks.CUT_POLISHED_NETHERRACK);
+		addDrop(ModBlocks.LAYERED_POLISHED_NETHERRACK);
+
+
 	}
 
 	/*public LootTable.Builder BasicOreDrops(Block drop, Item item) {
