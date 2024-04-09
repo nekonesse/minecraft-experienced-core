@@ -16,6 +16,12 @@ public class ModBlocks {
 		new Block(QuiltBlockSettings.copyOf(Blocks.POLISHED_ANDESITE)));
 	public static final Block POLISHED_ANDESITE_WALL = registerBlock("polished_andesite_wall",
 		new WallBlock(QuiltBlockSettings.copyOf(Blocks.POLISHED_ANDESITE)));
+	//POLISHED GRANITE
+	public static final Block POLISHED_GRANITE_WALL = registerBlock("polished_granite_wall",
+		new WallBlock(QuiltBlockSettings.copyOf(Blocks.POLISHED_GRANITE)));
+	//POLISHED DIORITE
+	public static final Block POLISHED_DIORITE_WALL = registerBlock("polished_diorite_wall",
+		new WallBlock(QuiltBlockSettings.copyOf(Blocks.POLISHED_DIORITE)));
 	//POLISHED NETHERRACK
 	public static final Block POLISHED_NETHERRACK = registerBlock("polished_netherrack",
 		new Block(QuiltBlockSettings.copyOf(Blocks.NETHER_BRICKS).strength(4f)));

@@ -25,6 +25,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 	public void generate() {
 		addDrop(ModBlocks.CRACKED_POLISHED_ANDESITE);
 		addDrop(ModBlocks.POLISHED_ANDESITE_WALL);
+		addDrop(ModBlocks.POLISHED_GRANITE_WALL);
+		addDrop(ModBlocks.POLISHED_DIORITE_WALL);
 		addDrop(ModBlocks.POLISHED_NETHERRACK);
 		addDrop(ModBlocks.POLISHED_NETHERRACK_STAIRS);
 		addDrop(ModBlocks.POLISHED_NETHERRACK_WALL);

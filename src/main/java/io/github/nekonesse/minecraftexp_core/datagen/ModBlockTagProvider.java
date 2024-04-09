@@ -27,7 +27,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 			.add(ModBlocks.POLISHED_NETHERRACK_PILLAR)
 			.add(ModBlocks.LAYERED_POLISHED_NETHERRACK)
 			.add(ModBlocks.CUT_POLISHED_NETHERRACK)
-			.add(ModBlocks.POLISHED_ANDESITE_WALL);
+			.add(ModBlocks.POLISHED_ANDESITE_WALL)
+			.add(ModBlocks.POLISHED_DIORITE_WALL)
+			.add(ModBlocks.POLISHED_GRANITE_WALL);
 
 		getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL);
 
@@ -39,6 +41,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
 		getOrCreateTagBuilder(BlockTags.WALLS)
 			.add(ModBlocks.POLISHED_ANDESITE_WALL)
+			.add(ModBlocks.POLISHED_GRANITE_WALL)
+			.add(ModBlocks.POLISHED_DIORITE_WALL)
 			.add(ModBlocks.POLISHED_NETHERRACK_WALL);
 	}
 }

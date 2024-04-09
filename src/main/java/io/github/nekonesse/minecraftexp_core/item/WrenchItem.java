@@ -1,10 +1,13 @@
 package io.github.nekonesse.minecraftexp_core.item;
 
+import io.github.nekonesse.minecraftexp_core.sound.ModSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.Items;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.Hand;
@@ -33,6 +36,17 @@ public class WrenchItem extends Item {
 			if (context.getPlayer().getMainHandStack() == context.getStack()) {
 				context.getPlayer().swingHand(Hand.MAIN_HAND);
 			}
+
+			world.playSound(
+				null,
+				context.getPlayer().getX(),
+				context.getPlayer().getY(),
+				context.getPlayer().getZ(),
+				ModSounds.WRENCH_USE,
+				SoundCategory.PLAYERS,
+				1.0F,
+				1.0F
+			);
 		}
 		world.setBlockState(context.getBlockPos(), rotation, Block.NOTIFY_ALL);
 		return super.useOnBlock(context);

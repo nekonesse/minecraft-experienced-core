@@ -1,0 +1,8 @@
+{
+  "wrench_use": {
+    "subtitle": "sounds.minecraftexp_core.wrench_use",
+    "sounds": [
+      "minecraftexp_core:wrench_use"
+    ]
+  }
+}

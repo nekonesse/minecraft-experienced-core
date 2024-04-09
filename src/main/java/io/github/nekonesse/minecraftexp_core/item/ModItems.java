@@ -24,7 +24,7 @@ public class ModItems {
 	public static final Item SHORTBOW = registerItem("shortbow", new ShortBowItem(new QuiltItemSettings().maxDamage(640)));
 	public static final Item LONGBOW = registerItem("longbow", new LongBowItem(new QuiltItemSettings().maxDamage(640)));
 	public static final Item FIRE_ARROW_ITEM = registerItem("fire_arrow", new FireArrowItem(new QuiltItemSettings()));
-	public static final Item COPPER_WRENCH = registerItem("copper_wrench", new WrenchItem(new QuiltItemSettings().maxDamage(64).maxCount(1)));
+	public static final Item COPPER_WRENCH = registerItem("copper_wrench", new WrenchItem(new QuiltItemSettings().maxDamage(64)));
 	private static Item registerItem(String name, Item item) {
 		return Registry.register(Registries.ITEM, new Identifier(MinecraftExp_Core.MOD_ID, name), item);
 	}

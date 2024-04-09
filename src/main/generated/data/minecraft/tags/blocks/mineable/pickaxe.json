@@ -9,6 +9,8 @@
     "minecraftexp_core:polished_netherrack_pillar",
     "minecraftexp_core:layered_polished_netherrack",
     "minecraftexp_core:cut_polished_netherrack",
-    "minecraftexp_core:polished_andesite_wall"
+    "minecraftexp_core:polished_andesite_wall",
+    "minecraftexp_core:polished_diorite_wall",
+    "minecraftexp_core:polished_granite_wall"
   ]
 }
