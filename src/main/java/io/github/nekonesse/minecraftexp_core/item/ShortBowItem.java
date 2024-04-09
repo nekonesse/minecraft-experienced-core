@@ -1,12 +1,8 @@
 package io.github.nekonesse.minecraftexp_core.item;
 
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.Vec3d;
 import org.quiltmc.qsl.item.extensions.api.bow.BowShotProjectileEvents;
 import org.quiltmc.qsl.item.extensions.api.bow.ProjectileModifyingBowItem;
 

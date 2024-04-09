@@ -31,5 +31,6 @@ public class ModModelProvider extends FabricModelProvider {
 	@Override
 	public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 		itemModelGenerator.register(ModItems.COPPER_NUGGET, Models.SINGLE_LAYER_ITEM);
+		itemModelGenerator.register(ModItems.COPPER_WRENCH, Models.SINGLE_LAYER_ITEM);
 	}
 }
