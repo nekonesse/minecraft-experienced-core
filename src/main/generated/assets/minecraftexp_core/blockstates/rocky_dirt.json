@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "minecraftexp_core:block/rocky_dirt"
+    }
+  }
+}

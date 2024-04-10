@@ -24,8 +24,13 @@ public class ModModelProvider extends FabricModelProvider {
 		polishedNetherrackPool.stairs(ModBlocks.POLISHED_NETHERRACK_STAIRS);
 		polishedNetherrackPool.slab(ModBlocks.POLISHED_NETHERRACK_SLAB);
 		polishedNetherrackPool.wall(ModBlocks.POLISHED_NETHERRACK_WALL);
-
-
+		BlockStateModelGenerator.BlockTexturePool cobblestoneBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COBBLESTONE_BRICKS);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LAYERED_COBBLESTONE_BRICKS);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STACKED_COBBLESTONE_BRICKS);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CUT_COBBLESTONE_BRICKS);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_COBBLESTONE_BRICKS);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SMALL_COBBLESTONE_BRICKS);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ROCKY_DIRT);
 	}
 
 	@Override

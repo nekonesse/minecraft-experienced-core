@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "minecraftexp_core:block/layered_cobblestone_bricks"
+    }
+  }
+}

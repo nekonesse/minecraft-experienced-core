@@ -1,9 +1,11 @@
 package io.github.nekonesse.minecraftexp_core.block;
 
 import io.github.nekonesse.minecraftexp_core.MinecraftExp_Core;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -17,14 +19,33 @@ public class ModBlocks {
 	public static final Block POLISHED_ANDESITE_WALL = registerBlock("polished_andesite_wall",
 		new WallBlock(QuiltBlockSettings.copyOf(Blocks.POLISHED_ANDESITE)));
 	//POLISHED GRANITE
+
 	public static final Block POLISHED_GRANITE_WALL = registerBlock("polished_granite_wall",
 		new WallBlock(QuiltBlockSettings.copyOf(Blocks.POLISHED_GRANITE)));
 	//POLISHED DIORITE
 	public static final Block POLISHED_DIORITE_WALL = registerBlock("polished_diorite_wall",
 		new WallBlock(QuiltBlockSettings.copyOf(Blocks.POLISHED_DIORITE)));
+	//COBBLESTONE
+	public static final Block COBBLESTONE_BRICKS = registerBlock("cobblestone_bricks",
+		new Block(QuiltBlockSettings.copyOf(Blocks.COBBLESTONE)));
+	public static final Block LAYERED_COBBLESTONE_BRICKS = registerBlock("layered_cobblestone_bricks",
+		new Block(QuiltBlockSettings.copyOf(Blocks.COBBLESTONE)));
+	public static final Block STACKED_COBBLESTONE_BRICKS = registerBlock("stacked_cobblestone_bricks",
+		new Block(QuiltBlockSettings.copyOf(Blocks.COBBLESTONE)));
+	public static final Block CUT_COBBLESTONE_BRICKS = registerBlock("cut_cobblestone_bricks",
+		new Block(QuiltBlockSettings.copyOf(Blocks.COBBLESTONE)));
+	public static final Block SMALL_COBBLESTONE_BRICKS = registerBlock("small_cobblestone_bricks",
+		new Block(QuiltBlockSettings.copyOf(Blocks.COBBLESTONE)));
+	public static final Block TRIPLE_COBBLESTONE_BRICKS = registerBlock("triple_cobblestone_bricks",
+		new Block(QuiltBlockSettings.copyOf(Blocks.COBBLESTONE)));
+	//STONE
+
+	//DIRT
+	public static final Block ROCKY_DIRT = registerBlock("rocky_dirt",
+		new Block(QuiltBlockSettings.copyOf(Blocks.COARSE_DIRT)));
 	//POLISHED NETHERRACK
 	public static final Block POLISHED_NETHERRACK = registerBlock("polished_netherrack",
-		new Block(QuiltBlockSettings.copyOf(Blocks.NETHER_BRICKS).strength(4f)));
+		new Block(QuiltBlockSettings.copyOf(Blocks.NETHER_BRICKS).strength(2f)));
 	public static final Block POLISHED_NETHERRACK_SLAB = registerBlock("polished_netherrack_slab",
 		new SlabBlock(QuiltBlockSettings.copyOf(ModBlocks.POLISHED_NETHERRACK)));
 	public static final Block POLISHED_NETHERRACK_STAIRS = registerBlock("polished_netherrack_stairs",
@@ -48,7 +69,19 @@ public class ModBlocks {
 		return Registry.register(Registries.ITEM, new Identifier(MinecraftExp_Core.MOD_ID, name),
 			new BlockItem(block, new QuiltItemSettings()));
 	}
+
+	private static void registerTabs() {
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+			entries.addAfter(Blocks.COBBLESTONE_WALL,COBBLESTONE_BRICKS);
+			entries.addAfter(COBBLESTONE_BRICKS,LAYERED_COBBLESTONE_BRICKS);
+		});
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL_BLOCKS).register(entries -> {
+			entries.addAfter(Blocks.COARSE_DIRT,ROCKY_DIRT);
+		});
+	}
+
 	public static void registerModBlock() {
+		registerTabs();
 		MinecraftExp_Core.LOGGER.info("Registering ModBlocks for" + MinecraftExp_Core.MOD_ID);
 	}
 }
