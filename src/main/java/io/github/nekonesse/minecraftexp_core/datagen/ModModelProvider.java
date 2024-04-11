@@ -19,17 +19,22 @@ public class ModModelProvider extends FabricModelProvider {
 		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_POLISHED_ANDESITE);
 
 		BlockStateModelGenerator.BlockTexturePool polishedNetherrackPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_NETHERRACK);
-		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LAYERED_POLISHED_NETHERRACK);
-		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CUT_POLISHED_NETHERRACK);
 		polishedNetherrackPool.stairs(ModBlocks.POLISHED_NETHERRACK_STAIRS);
 		polishedNetherrackPool.slab(ModBlocks.POLISHED_NETHERRACK_SLAB);
 		polishedNetherrackPool.wall(ModBlocks.POLISHED_NETHERRACK_WALL);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LAYERED_POLISHED_NETHERRACK);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CUT_POLISHED_NETHERRACK);
 		BlockStateModelGenerator.BlockTexturePool cobblestoneBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COBBLESTONE_BRICKS);
 		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LAYERED_COBBLESTONE_BRICKS);
 		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STACKED_COBBLESTONE_BRICKS);
 		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CUT_COBBLESTONE_BRICKS);
 		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_COBBLESTONE_BRICKS);
 		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SMALL_COBBLESTONE_BRICKS);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LAYERED_STONE_BRICKS);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STACKED_STONE_BRICKS);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CUT_STONE_BRICKS);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_STONE_BRICKS);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SMALL_STONE_BRICKS);
 		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ROCKY_DIRT);
 	}
 

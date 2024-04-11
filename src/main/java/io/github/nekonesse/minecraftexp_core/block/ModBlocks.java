@@ -39,7 +39,16 @@ public class ModBlocks {
 	public static final Block TRIPLE_COBBLESTONE_BRICKS = registerBlock("triple_cobblestone_bricks",
 		new Block(QuiltBlockSettings.copyOf(Blocks.COBBLESTONE)));
 	//STONE
-
+	public static final Block LAYERED_STONE_BRICKS = registerBlock("layered_stone_bricks",
+		new Block(QuiltBlockSettings.copyOf(Blocks.STONE)));
+	public static final Block STACKED_STONE_BRICKS = registerBlock("stacked_stone_bricks",
+		new Block(QuiltBlockSettings.copyOf(Blocks.STONE)));
+	public static final Block CUT_STONE_BRICKS = registerBlock("cut_stone_bricks",
+		new Block(QuiltBlockSettings.copyOf(Blocks.STONE)));
+	public static final Block SMALL_STONE_BRICKS = registerBlock("small_stone_bricks",
+		new Block(QuiltBlockSettings.copyOf(Blocks.STONE)));
+	public static final Block TRIPLE_STONE_BRICKS = registerBlock("triple_stone_bricks",
+		new Block(QuiltBlockSettings.copyOf(Blocks.STONE)));
 	//DIRT
 	public static final Block ROCKY_DIRT = registerBlock("rocky_dirt",
 		new Block(QuiltBlockSettings.copyOf(Blocks.COARSE_DIRT)));
@@ -74,6 +83,15 @@ public class ModBlocks {
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
 			entries.addAfter(Blocks.COBBLESTONE_WALL,COBBLESTONE_BRICKS);
 			entries.addAfter(COBBLESTONE_BRICKS,LAYERED_COBBLESTONE_BRICKS);
+			entries.addAfter(COBBLESTONE_BRICKS,STACKED_COBBLESTONE_BRICKS);
+			entries.addAfter(COBBLESTONE_BRICKS,CUT_COBBLESTONE_BRICKS);
+			entries.addAfter(COBBLESTONE_BRICKS,SMALL_COBBLESTONE_BRICKS);
+			entries.addAfter(COBBLESTONE_BRICKS,TRIPLE_COBBLESTONE_BRICKS);
+			entries.addAfter(Blocks.STONE_BRICKS,LAYERED_STONE_BRICKS);
+			entries.addAfter(Blocks.STONE_BRICKS,STACKED_STONE_BRICKS);
+			entries.addAfter(Blocks.STONE_BRICKS,CUT_STONE_BRICKS);
+			entries.addAfter(Blocks.STONE_BRICKS,SMALL_STONE_BRICKS);
+			entries.addAfter(Blocks.STONE_BRICKS,TRIPLE_STONE_BRICKS);
 		});
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL_BLOCKS).register(entries -> {
 			entries.addAfter(Blocks.COARSE_DIRT,ROCKY_DIRT);
