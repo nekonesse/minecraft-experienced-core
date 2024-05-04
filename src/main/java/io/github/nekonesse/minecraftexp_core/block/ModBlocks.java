@@ -3,11 +3,15 @@ package io.github.nekonesse.minecraftexp_core.block;
 import io.github.nekonesse.minecraftexp_core.MinecraftExp_Core;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
+import net.minecraft.block.enums.RailShape;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.state.property.Properties;
+import net.minecraft.state.property.Property;
 import net.minecraft.util.Identifier;
 import org.quiltmc.qsl.block.extensions.api.QuiltBlockSettings;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
@@ -67,7 +71,10 @@ public class ModBlocks {
 		new Block(QuiltBlockSettings.copyOf(ModBlocks.POLISHED_NETHERRACK)));
 	public static final Block POLISHED_NETHERRACK_PILLAR = registerBlock("polished_netherrack_pillar",
 		new PillarBlock(QuiltBlockSettings.copyOf(ModBlocks.POLISHED_NETHERRACK)));
-
+	public static final Block COPPER_RAIL = registerBlock("copper_rail",
+		new CopperRailBlock(QuiltBlockSettings.copyOf(Blocks.RAIL)));
+	public static final Block WOODEN_RAIL = registerBlock("wooden_rail",
+		new RailBlock(QuiltBlockSettings.copyOf(Blocks.RAIL).hardness(0.7F).strength(0.4F).sounds(BlockSoundGroup.WOOD)));
 
 	private static Block registerBlock(String name, Block block) {
 		registerBlockItem(name, block);

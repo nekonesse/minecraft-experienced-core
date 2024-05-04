@@ -44,5 +44,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 			.add(ModBlocks.POLISHED_GRANITE_WALL)
 			.add(ModBlocks.POLISHED_DIORITE_WALL)
 			.add(ModBlocks.POLISHED_NETHERRACK_WALL);
+
+		getOrCreateTagBuilder(BlockTags.RAILS)
+			.add(ModBlocks.COPPER_RAIL)
+			.add(ModBlocks.WOODEN_RAIL);
+
 	}
 }

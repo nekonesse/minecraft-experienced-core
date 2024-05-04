@@ -36,6 +36,8 @@ public class ModModelProvider extends FabricModelProvider {
 		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TRIPLE_STONE_BRICKS);
 		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SMALL_STONE_BRICKS);
 		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ROCKY_DIRT);
+
+		blockStateModelGenerator.registerTurnableRail(ModBlocks.WOODEN_RAIL);
 	}
 
 	@Override

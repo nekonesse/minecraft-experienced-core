@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "minecraftexp_core:copper_rail",
+    "minecraftexp_core:wooden_rail"
+  ]
+}
