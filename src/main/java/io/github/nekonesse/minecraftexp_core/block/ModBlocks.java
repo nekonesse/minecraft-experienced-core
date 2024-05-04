@@ -79,7 +79,7 @@ public class ModBlocks {
 		new OxidizableCopperRailBlock(Oxidizable.OxidizationLevel.EXPOSED,QuiltBlockSettings.copyOf(Blocks.RAIL).ticksRandomly(true).sounds(BlockSoundGroup.COPPER)));
 	public static final Block COPPER_RAIL = registerBlock("copper_rail",
 		new OxidizableCopperRailBlock(Oxidizable.OxidizationLevel.UNAFFECTED,QuiltBlockSettings.copyOf(Blocks.RAIL).ticksRandomly(true).sounds(BlockSoundGroup.COPPER)));
-	public static final Block WAXED_OXIDIZED_COPPER_RAIL = registerBlock("waxeed_oxidized_copper_rail",
+	public static final Block WAXED_OXIDIZED_COPPER_RAIL = registerBlock("waxed_oxidized_copper_rail",
 		new CopperRailBlock(QuiltBlockSettings.copyOf(Blocks.RAIL).sounds(BlockSoundGroup.COPPER)));
 	public static final Block WAXED_WEATHERED_COPPER_RAIL = registerBlock("waxed_weathered_copper_rail",
 		new CopperRailBlock(QuiltBlockSettings.copyOf(Blocks.RAIL).sounds(BlockSoundGroup.COPPER)));

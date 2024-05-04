@@ -9,6 +9,20 @@
   "block.minecraftexp_core.polished_granite_wall": "Polished Granite Wall",
   "block.minecraftexp_core.polished_diorite_wall": "Polished Diorite Wall",
 
+  "block.minecraftexp_core.cobblestone_bricks": "Cobblestone Bricks",
+  "block.minecraftexp_core.layered_cobblestone_bricks": "Layered Cobblestone Bricks",
+  "block.minecraftexp_core.stacked_cobblestone_bricks": "Stacked Cobblestone Bricks",
+  "block.minecraftexp_core.cut_cobblestone_bricks": "Cut Cobblestone Bricks",
+  "block.minecraftexp_core.triple_cobblestone_bricks": "Triple Cobblestone Bricks",
+  "block.minecraftexp_core.small_cobblestone_bricks": "Small Cobblestone Bricks",
+  "block.minecraftexp_core.layered_stone_bricks": "Layered Cobblestone Bricks",
+  "block.minecraftexp_core.stacked_stone_bricks": "Stacked Cobblestone Bricks",
+  "block.minecraftexp_core.cut_stone_bricks": "Cut Stone Bricks",
+  "block.minecraftexp_core.triple_stone_bricks": "Triple Stone Bricks",
+  "block.minecraftexp_core.small_stone_bricks": "Small Stone Bricks",
+
+  "block.minecraftexp_core.rocky_dirt": "Rocky Dirt",
+
   "block.minecraftexp_core.polished_netherrack": "Polished Netherrack",
   "block.minecraftexp_core.polished_netherrack_slab": "Polished Netherrack Slab",
   "block.minecraftexp_core.polished_netherrack_stairs": "Polished Netherrack Stair",
@@ -18,5 +32,12 @@
   "block.minecraftexp_core.cut_polished_netherrack": "Cut Polished Netherrack",
 
   "block.minecraftexp_core.copper_rail": "Copper Rail",
+  "block.minecraftexp_core.exposed_copper_rail": "Exposed Copper Rail",
+  "block.minecraftexp_core.weathered_copper_rail": "Weathered Copper Rail",
+  "block.minecraftexp_core.oxidized_copper_rail": "Oxidized Copper Rail",
+  "block.minecraftexp_core.waxed_copper_rail": "Waxed Copper Rail",
+  "block.minecraftexp_core.waxed_exposed_copper_rail": "Waxed Exposed Copper Rail",
+  "block.minecraftexp_core.waxed_weathered_copper_rail": "Waxed Weathered Copper Rail",
+  "block.minecraftexp_core.waxed_oxidized_copper_rail": "Waxed Oxidized Copper Rail",
   "block.minecraftexp_core.wooden_rail": "Wooden Rail"
 }
