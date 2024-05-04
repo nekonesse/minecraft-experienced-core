@@ -13,6 +13,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.Properties;
 import net.minecraft.state.property.Property;
 import net.minecraft.util.Identifier;
+import org.quiltmc.qsl.block.content.registry.api.BlockContentRegistries;
 import org.quiltmc.qsl.block.extensions.api.QuiltBlockSettings;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
@@ -23,10 +24,13 @@ public class ModBlocks {
 	public static final Block POLISHED_ANDESITE_WALL = registerBlock("polished_andesite_wall",
 		new WallBlock(QuiltBlockSettings.copyOf(Blocks.POLISHED_ANDESITE)));
 	//POLISHED GRANITE
-
+	public static final Block CRACKED_POLISHED_GRANITE = registerBlock("cracked_polished_granite",
+		new Block(QuiltBlockSettings.copyOf(Blocks.POLISHED_GRANITE)));
 	public static final Block POLISHED_GRANITE_WALL = registerBlock("polished_granite_wall",
 		new WallBlock(QuiltBlockSettings.copyOf(Blocks.POLISHED_GRANITE)));
 	//POLISHED DIORITE
+	public static final Block CRACKED_POLISHED_DIORITE = registerBlock("cracked_polished_diorite",
+		new Block(QuiltBlockSettings.copyOf(Blocks.POLISHED_DIORITE)));
 	public static final Block POLISHED_DIORITE_WALL = registerBlock("polished_diorite_wall",
 		new WallBlock(QuiltBlockSettings.copyOf(Blocks.POLISHED_DIORITE)));
 	//COBBLESTONE
@@ -109,11 +113,21 @@ public class ModBlocks {
 			entries.addAfter(STACKED_COBBLESTONE_BRICKS,CUT_COBBLESTONE_BRICKS);
 			entries.addAfter(CUT_COBBLESTONE_BRICKS,SMALL_COBBLESTONE_BRICKS);
 			entries.addAfter(SMALL_COBBLESTONE_BRICKS,TRIPLE_COBBLESTONE_BRICKS);
+
 			entries.addAfter(Blocks.STONE_BRICKS,LAYERED_STONE_BRICKS);
 			entries.addAfter(LAYERED_STONE_BRICKS,STACKED_STONE_BRICKS);
 			entries.addAfter(STACKED_STONE_BRICKS,CUT_STONE_BRICKS);
 			entries.addAfter(CUT_STONE_BRICKS,SMALL_STONE_BRICKS);
 			entries.addAfter(SMALL_STONE_BRICKS,TRIPLE_STONE_BRICKS);
+
+			entries.addAfter(Blocks.POLISHED_ANDESITE_SLAB,POLISHED_ANDESITE_WALL);
+			entries.addAfter(POLISHED_ANDESITE_WALL,CRACKED_POLISHED_ANDESITE);
+
+			entries.addAfter(Blocks.POLISHED_DIORITE_SLAB,POLISHED_DIORITE_WALL);
+			entries.addAfter(POLISHED_DIORITE_WALL,CRACKED_POLISHED_DIORITE);
+
+			entries.addAfter(Blocks.POLISHED_GRANITE_SLAB,POLISHED_GRANITE_WALL);
+			entries.addAfter(POLISHED_GRANITE_WALL,CRACKED_POLISHED_GRANITE);
 		});
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL_BLOCKS).register(entries -> {
 			entries.addAfter(Blocks.COARSE_DIRT,ROCKY_DIRT);

@@ -17,6 +17,8 @@ public class ModModelProvider extends FabricModelProvider {
 	@Override
 	public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_POLISHED_ANDESITE);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_POLISHED_GRANITE);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_POLISHED_DIORITE);
 
 		BlockStateModelGenerator.BlockTexturePool polishedNetherrackPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_NETHERRACK);
 		polishedNetherrackPool.stairs(ModBlocks.POLISHED_NETHERRACK_STAIRS);
