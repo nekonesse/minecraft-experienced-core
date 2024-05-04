@@ -22,6 +22,9 @@ public abstract class AbstractMinecartEntityMixin extends Entity {
 		super(entityType, world);
 		this.inanimate = true;
 	}
+	@Unique private boolean onOxidizedCopperRail;
+	@Unique private boolean onWeatheredCopperRail;
+	@Unique private boolean onExposedCopperRail;
 	@Unique private boolean onCopperRail;
 	@Unique private boolean onWoodenRail;
 
@@ -45,13 +48,19 @@ public abstract class AbstractMinecartEntityMixin extends Entity {
 		)
 	)
 	private BlockState setOnRail(BlockState onState) {
-		this.onCopperRail = onState.isOf(ModBlocks.COPPER_RAIL);
+		this.onOxidizedCopperRail = (onState.isOf(ModBlocks.OXIDIZED_COPPER_RAIL) || onState.isOf(ModBlocks.WAXED_OXIDIZED_COPPER_RAIL));
+		this.onWeatheredCopperRail = (onState.isOf(ModBlocks.WEATHERED_COPPER_RAIL) || onState.isOf(ModBlocks.WAXED_WEATHERED_COPPER_RAIL));
+		this.onExposedCopperRail = (onState.isOf(ModBlocks.EXPOSED_COPPER_RAIL) || onState.isOf(ModBlocks.WAXED_EXPOSED_COPPER_RAIL));
+		this.onCopperRail = (onState.isOf(ModBlocks.COPPER_RAIL) || onState.isOf(ModBlocks.WAXED_COPPER_RAIL));
 		this.onWoodenRail = onState.isOf(ModBlocks.WOODEN_RAIL);
 		return onState;
 	}
 
 	@Inject(method = "tick", at = @At("TAIL"))
 	private void resetOnRail(CallbackInfo ci) {
+		this.onOxidizedCopperRail = false;
+		this.onWeatheredCopperRail = false;
+		this.onExposedCopperRail = false;
 		this.onCopperRail = false;
 		this.onWoodenRail = false;
 	}
@@ -62,7 +71,7 @@ public abstract class AbstractMinecartEntityMixin extends Entity {
 		)
 	)
 	private boolean RailIsAllowed(boolean original, BlockPos pos, BlockState state) {
-		return original || onCopperRail || onWoodenRail;
+		return original || onOxidizedCopperRail || onWeatheredCopperRail || onExposedCopperRail || onCopperRail || onWoodenRail;
 	}
 
 	@WrapOperation(
@@ -79,9 +88,7 @@ public abstract class AbstractMinecartEntityMixin extends Entity {
 		)
 	)
 	private Comparable<Boolean> RailIsPoweredOrAllowed(BlockState state, Property<?> powered, Operation<Comparable<Boolean>> original) {
-		if (onWoodenRail) {
-			return Boolean.valueOf(true);
-		} else if (onCopperRail) {
+		if (onOxidizedCopperRail || onWeatheredCopperRail || onExposedCopperRail || onCopperRail || onWoodenRail) {
 			return Boolean.valueOf(true);
 		} else
 			return original.call(state, powered);
@@ -94,7 +101,13 @@ public abstract class AbstractMinecartEntityMixin extends Entity {
 	)
 	private double ModifyRailSpeed(double original) {
 		if (onWoodenRail) {
-			return 60.0;
+			return 75.0;
+		} else if (onOxidizedCopperRail) {
+			return 45.0;
+		} else if (onWeatheredCopperRail) {
+			return 35.0;
+		} else if (onExposedCopperRail) {
+			return 25.0;
 		} else if (onCopperRail) {
 			return 15.0;
 		}

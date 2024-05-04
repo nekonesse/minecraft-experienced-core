@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": {
+    "minecraftexp_core:copper_rail": "minecraftexp_core:waxed_copper_rail", "minecraftexp_core:exposed_copper_rail": "minecraftexp_core:waxed_exposed_copper_rail", "minecraftexp_core:weathered_copper_rail": "minecraftexp_core:waxed_weathered_copper_rail", "minecraftexp_core:oxidized_copper_rail": "minecraftexp_core:waxed_oxidized_copper_rail"
+  }
+}

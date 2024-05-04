@@ -71,8 +71,22 @@ public class ModBlocks {
 		new Block(QuiltBlockSettings.copyOf(ModBlocks.POLISHED_NETHERRACK)));
 	public static final Block POLISHED_NETHERRACK_PILLAR = registerBlock("polished_netherrack_pillar",
 		new PillarBlock(QuiltBlockSettings.copyOf(ModBlocks.POLISHED_NETHERRACK)));
+	public static final Block OXIDIZED_COPPER_RAIL = registerBlock("oxidized_copper_rail",
+		new OxidizableCopperRailBlock(Oxidizable.OxidizationLevel.OXIDIZED,QuiltBlockSettings.copyOf(Blocks.RAIL).sounds(BlockSoundGroup.COPPER)));
+	public static final Block WEATHERED_COPPER_RAIL = registerBlock("weathered_copper_rail",
+		new OxidizableCopperRailBlock(Oxidizable.OxidizationLevel.WEATHERED,QuiltBlockSettings.copyOf(Blocks.RAIL).ticksRandomly(true).sounds(BlockSoundGroup.COPPER)));
+	public static final Block EXPOSED_COPPER_RAIL = registerBlock("exposed_copper_rail",
+		new OxidizableCopperRailBlock(Oxidizable.OxidizationLevel.EXPOSED,QuiltBlockSettings.copyOf(Blocks.RAIL).ticksRandomly(true).sounds(BlockSoundGroup.COPPER)));
 	public static final Block COPPER_RAIL = registerBlock("copper_rail",
-		new CopperRailBlock(QuiltBlockSettings.copyOf(Blocks.RAIL)));
+		new OxidizableCopperRailBlock(Oxidizable.OxidizationLevel.UNAFFECTED,QuiltBlockSettings.copyOf(Blocks.RAIL).ticksRandomly(true).sounds(BlockSoundGroup.COPPER)));
+	public static final Block WAXED_OXIDIZED_COPPER_RAIL = registerBlock("waxeed_oxidized_copper_rail",
+		new CopperRailBlock(QuiltBlockSettings.copyOf(Blocks.RAIL).sounds(BlockSoundGroup.COPPER)));
+	public static final Block WAXED_WEATHERED_COPPER_RAIL = registerBlock("waxed_weathered_copper_rail",
+		new CopperRailBlock(QuiltBlockSettings.copyOf(Blocks.RAIL).sounds(BlockSoundGroup.COPPER)));
+	public static final Block WAXED_EXPOSED_COPPER_RAIL = registerBlock("waxed_exposed_copper_rail",
+		new CopperRailBlock(QuiltBlockSettings.copyOf(Blocks.RAIL).sounds(BlockSoundGroup.COPPER)));
+	public static final Block WAXED_COPPER_RAIL = registerBlock("waxed_copper_rail",
+		new CopperRailBlock(QuiltBlockSettings.copyOf(Blocks.RAIL).sounds(BlockSoundGroup.COPPER)));
 	public static final Block WOODEN_RAIL = registerBlock("wooden_rail",
 		new RailBlock(QuiltBlockSettings.copyOf(Blocks.RAIL).hardness(0.7F).strength(0.4F).sounds(BlockSoundGroup.WOOD)));
 
@@ -86,22 +100,34 @@ public class ModBlocks {
 			new BlockItem(block, new QuiltItemSettings()));
 	}
 
+
 	private static void registerTabs() {
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
 			entries.addAfter(Blocks.COBBLESTONE_WALL,COBBLESTONE_BRICKS);
 			entries.addAfter(COBBLESTONE_BRICKS,LAYERED_COBBLESTONE_BRICKS);
-			entries.addAfter(COBBLESTONE_BRICKS,STACKED_COBBLESTONE_BRICKS);
-			entries.addAfter(COBBLESTONE_BRICKS,CUT_COBBLESTONE_BRICKS);
-			entries.addAfter(COBBLESTONE_BRICKS,SMALL_COBBLESTONE_BRICKS);
-			entries.addAfter(COBBLESTONE_BRICKS,TRIPLE_COBBLESTONE_BRICKS);
+			entries.addAfter(LAYERED_COBBLESTONE_BRICKS,STACKED_COBBLESTONE_BRICKS);
+			entries.addAfter(STACKED_COBBLESTONE_BRICKS,CUT_COBBLESTONE_BRICKS);
+			entries.addAfter(CUT_COBBLESTONE_BRICKS,SMALL_COBBLESTONE_BRICKS);
+			entries.addAfter(SMALL_COBBLESTONE_BRICKS,TRIPLE_COBBLESTONE_BRICKS);
 			entries.addAfter(Blocks.STONE_BRICKS,LAYERED_STONE_BRICKS);
-			entries.addAfter(Blocks.STONE_BRICKS,STACKED_STONE_BRICKS);
-			entries.addAfter(Blocks.STONE_BRICKS,CUT_STONE_BRICKS);
-			entries.addAfter(Blocks.STONE_BRICKS,SMALL_STONE_BRICKS);
-			entries.addAfter(Blocks.STONE_BRICKS,TRIPLE_STONE_BRICKS);
+			entries.addAfter(LAYERED_STONE_BRICKS,STACKED_STONE_BRICKS);
+			entries.addAfter(STACKED_STONE_BRICKS,CUT_STONE_BRICKS);
+			entries.addAfter(CUT_STONE_BRICKS,SMALL_STONE_BRICKS);
+			entries.addAfter(SMALL_STONE_BRICKS,TRIPLE_STONE_BRICKS);
 		});
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL_BLOCKS).register(entries -> {
 			entries.addAfter(Blocks.COARSE_DIRT,ROCKY_DIRT);
+		});
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE_BLOCKS).register(entries -> {
+			entries.addBefore(Blocks.RAIL,WOODEN_RAIL);
+			entries.addAfter(Blocks.ACTIVATOR_RAIL,COPPER_RAIL);
+			entries.addAfter(COPPER_RAIL,EXPOSED_COPPER_RAIL);
+			entries.addAfter(EXPOSED_COPPER_RAIL,WEATHERED_COPPER_RAIL);
+			entries.addAfter(WEATHERED_COPPER_RAIL,OXIDIZED_COPPER_RAIL);
+			entries.addAfter(OXIDIZED_COPPER_RAIL,WAXED_COPPER_RAIL);
+			entries.addAfter(WAXED_COPPER_RAIL,WAXED_EXPOSED_COPPER_RAIL);
+			entries.addAfter(WAXED_EXPOSED_COPPER_RAIL,WAXED_WEATHERED_COPPER_RAIL);
+			entries.addAfter(WAXED_WEATHERED_COPPER_RAIL,WAXED_OXIDIZED_COPPER_RAIL);
 		});
 	}
 

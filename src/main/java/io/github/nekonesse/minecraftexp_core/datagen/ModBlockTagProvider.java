@@ -47,6 +47,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
 		getOrCreateTagBuilder(BlockTags.RAILS)
 			.add(ModBlocks.COPPER_RAIL)
+			.add(ModBlocks.EXPOSED_COPPER_RAIL)
+			.add(ModBlocks.WEATHERED_COPPER_RAIL)
+			.add(ModBlocks.OXIDIZED_COPPER_RAIL)
+			.add(ModBlocks.WAXED_COPPER_RAIL)
+			.add(ModBlocks.WAXED_EXPOSED_COPPER_RAIL)
+			.add(ModBlocks.WAXED_WEATHERED_COPPER_RAIL)
+			.add(ModBlocks.WAXED_OXIDIZED_COPPER_RAIL)
 			.add(ModBlocks.WOODEN_RAIL);
 
 	}
