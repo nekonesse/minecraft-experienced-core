@@ -16,6 +16,7 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+	maven { url 'https://maven.wispforest.io' }
 }
 
 loom {
@@ -72,6 +73,15 @@ dependencies {
 	// Quilted Fabric API will automatically pull in the correct QSL version.
 	modImplementation libs.quilted.fabric.api
 	// modImplementation libs.bundles.quilted.fabric.api // If you wish to use Fabric API's deprecated modules, you can replace the above line with this one
+
+	modImplementation (libs.gelatin) {
+		exclude(group: "net.fabricmc", module: "fabric-loader")
+		exclude(group: "net.fabricmc.fabric-api")
+	}
+	include (libs.gelatin) {
+		exclude(group: "net.fabricmc", module: "fabric-loader")
+		exclude(group: "net.fabricmc.fabric-api")
+	}
 }
 
 processResources {

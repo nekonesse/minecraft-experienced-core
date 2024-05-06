@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraftexp_core:block/apricot_stained_glass"
+  }
+}

@@ -9,6 +9,8 @@ import net.minecraft.block.Blocks;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.model.BlockStateModelGenerator;
 import net.minecraft.data.client.model.Models;
+import net.minecraft.data.client.model.TexturedModel;
+
 public class ModModelProvider extends FabricModelProvider {
 	public ModModelProvider(FabricDataOutput output) {
 		super(output);
@@ -24,6 +26,7 @@ public class ModModelProvider extends FabricModelProvider {
 		polishedNetherrackPool.stairs(ModBlocks.POLISHED_NETHERRACK_STAIRS);
 		polishedNetherrackPool.slab(ModBlocks.POLISHED_NETHERRACK_SLAB);
 		polishedNetherrackPool.wall(ModBlocks.POLISHED_NETHERRACK_WALL);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.POLISHED_NETHERRACK_BRICKS);
 		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LAYERED_POLISHED_NETHERRACK);
 		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CUT_POLISHED_NETHERRACK);
 		BlockStateModelGenerator.BlockTexturePool cobblestoneBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.COBBLESTONE_BRICKS);
@@ -40,11 +43,57 @@ public class ModModelProvider extends FabricModelProvider {
 		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ROCKY_DIRT);
 
 		blockStateModelGenerator.registerTurnableRail(ModBlocks.WOODEN_RAIL);
+
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.APRICOT_TERRACOTTA);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRIMSON_TERRACOTTA);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ORCHID_TERRACOTTA);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SPRING_GREEN_TERRACOTTA);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SKY_TERRACOTTA);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHARTREUSE_TERRACOTTA);
+
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.APRICOT_CONCRETE);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRIMSON_CONCRETE);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ORCHID_CONCRETE);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SPRING_GREEN_CONCRETE);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SKY_CONCRETE);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHARTREUSE_CONCRETE);
+
+		blockStateModelGenerator.registerRandomHorizontalRotations(TexturedModel.CUBE_ALL, ModBlocks.APRICOT_CONCRETE_POWDER);
+		blockStateModelGenerator.registerRandomHorizontalRotations(TexturedModel.CUBE_ALL, ModBlocks.CRIMSON_CONCRETE_POWDER);
+		blockStateModelGenerator.registerRandomHorizontalRotations(TexturedModel.CUBE_ALL, ModBlocks.ORCHID_CONCRETE_POWDER);
+		blockStateModelGenerator.registerRandomHorizontalRotations(TexturedModel.CUBE_ALL, ModBlocks.SPRING_GREEN_CONCRETE_POWDER);
+		blockStateModelGenerator.registerRandomHorizontalRotations(TexturedModel.CUBE_ALL, ModBlocks.SKY_CONCRETE_POWDER);
+		blockStateModelGenerator.registerRandomHorizontalRotations(TexturedModel.CUBE_ALL, ModBlocks.CHARTREUSE_CONCRETE_POWDER);
+
+		blockStateModelGenerator.registerCarpet(ModBlocks.APRICOT_WOOL, ModBlocks.APRICOT_CARPET);
+		blockStateModelGenerator.registerCarpet(ModBlocks.CRIMSON_WOOL, ModBlocks.CRIMSON_CARPET);
+		blockStateModelGenerator.registerCarpet(ModBlocks.ORCHID_WOOL, ModBlocks.ORCHID_CARPET);
+		blockStateModelGenerator.registerCarpet(ModBlocks.SPRING_GREEN_WOOL, ModBlocks.SPRING_GREEN_CARPET);
+		blockStateModelGenerator.registerCarpet(ModBlocks.SKY_WOOL, ModBlocks.SKY_CARPET);
+		blockStateModelGenerator.registerCarpet(ModBlocks.CHARTREUSE_WOOL, ModBlocks.CHARTREUSE_CARPET);
+
+		blockStateModelGenerator.registerGlassPane(ModBlocks.APRICOT_STAINED_GLASS, ModBlocks.APRICOT_STAINED_GLASS_PANE);
+		blockStateModelGenerator.registerGlassPane(ModBlocks.CRIMSON_STAINED_GLASS, ModBlocks.CRIMSON_STAINED_GLASS_PANE);
+		blockStateModelGenerator.registerGlassPane(ModBlocks.ORCHID_STAINED_GLASS, ModBlocks.ORCHID_STAINED_GLASS_PANE);
+		blockStateModelGenerator.registerGlassPane(ModBlocks.SPRING_GREEN_STAINED_GLASS, ModBlocks.SPRING_GREEN_STAINED_GLASS_PANE);
+		blockStateModelGenerator.registerGlassPane(ModBlocks.SKY_STAINED_GLASS, ModBlocks.SKY_STAINED_GLASS_PANE);
+		blockStateModelGenerator.registerGlassPane(ModBlocks.CHARTREUSE_STAINED_GLASS, ModBlocks.CHARTREUSE_STAINED_GLASS_PANE);
+
+		blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.APRICOT_GLAZED_TERRACOTTA , ModBlocks.CRIMSON_GLAZED_TERRACOTTA, ModBlocks.ORCHID_GLAZED_TERRACOTTA, ModBlocks.SPRING_GREEN_GLAZED_TERRACOTTA, ModBlocks.SKY_GLAZED_TERRACOTTA, ModBlocks.CHARTREUSE_GLAZED_TERRACOTTA);
 	}
 
 	@Override
 	public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 		itemModelGenerator.register(ModItems.COPPER_NUGGET, Models.SINGLE_LAYER_ITEM);
 		itemModelGenerator.register(ModItems.COPPER_WRENCH, Models.SINGLE_LAYER_ITEM);
+
+		itemModelGenerator.register(ModItems.FIRE_ARROW_ITEM, Models.SINGLE_LAYER_ITEM);
+
+		itemModelGenerator.register(ModItems.APRICOT_DYE, Models.SINGLE_LAYER_ITEM);
+		itemModelGenerator.register(ModItems.CRIMSON_DYE, Models.SINGLE_LAYER_ITEM);
+		itemModelGenerator.register(ModItems.ORCHID_DYE, Models.SINGLE_LAYER_ITEM);
+		itemModelGenerator.register(ModItems.SPRING_GREEN_DYE, Models.SINGLE_LAYER_ITEM);
+		itemModelGenerator.register(ModItems.SKY_DYE, Models.SINGLE_LAYER_ITEM);
+		itemModelGenerator.register(ModItems.CHARTREUSE_DYE, Models.SINGLE_LAYER_ITEM);
 	}
 }

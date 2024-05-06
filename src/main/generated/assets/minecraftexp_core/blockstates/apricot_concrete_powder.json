@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraftexp_core:block/apricot_concrete_powder"
+      },
+      {
+        "model": "minecraftexp_core:block/apricot_concrete_powder",
+        "y": 90
+      },
+      {
+        "model": "minecraftexp_core:block/apricot_concrete_powder",
+        "y": 180
+      },
+      {
+        "model": "minecraftexp_core:block/apricot_concrete_powder",
+        "y": 270
+      }
+    ]
+  }
+}

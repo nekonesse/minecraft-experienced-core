@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraftexp_core:block/chartreuse_stained_glass"
+  }
+}

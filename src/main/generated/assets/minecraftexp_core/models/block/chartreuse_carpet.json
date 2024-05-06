@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "minecraftexp_core:block/chartreuse_wool"
+  }
+}

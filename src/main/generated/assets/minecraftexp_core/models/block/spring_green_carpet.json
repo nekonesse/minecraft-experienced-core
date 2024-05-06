@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "minecraftexp_core:block/spring_green_wool"
+  }
+}

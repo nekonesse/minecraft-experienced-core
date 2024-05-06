@@ -4,6 +4,7 @@ import io.github.nekonesse.minecraftexp_core.block.ModBlocks;
 import io.github.nekonesse.minecraftexp_core.entity.ModEntities;
 import io.github.nekonesse.minecraftexp_core.item.ModItems;
 import io.github.nekonesse.minecraftexp_core.sound.ModSounds;
+import io.github.nekonesse.minecraftexp_core.util.ModDyes;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.block.Block;
 import org.quiltmc.loader.api.ModContainer;
@@ -23,6 +24,7 @@ public class MinecraftExp_Core implements ModInitializer {
 		ModBlocks.registerModBlock();
 		ModEntities.registerModEntites();
 		ModSounds.registerSounds();
+		ModDyes.registerModDyes();
 		BlockContentRegistries.OXIDIZABLE.put(ModBlocks.COPPER_RAIL, new ReversibleBlockEntry(ModBlocks.EXPOSED_COPPER_RAIL, true));
 		BlockContentRegistries.OXIDIZABLE.put(ModBlocks.EXPOSED_COPPER_RAIL, new ReversibleBlockEntry(ModBlocks.WEATHERED_COPPER_RAIL, true));
 		BlockContentRegistries.OXIDIZABLE.put(ModBlocks.WEATHERED_COPPER_RAIL, new ReversibleBlockEntry(ModBlocks.OXIDIZED_COPPER_RAIL, true));

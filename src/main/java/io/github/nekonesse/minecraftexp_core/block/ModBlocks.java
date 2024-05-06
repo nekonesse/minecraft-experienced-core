@@ -12,6 +12,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.Properties;
 import net.minecraft.state.property.Property;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import org.quiltmc.qsl.block.content.registry.api.BlockContentRegistries;
 import org.quiltmc.qsl.block.extensions.api.QuiltBlockSettings;
@@ -63,6 +64,8 @@ public class ModBlocks {
 	//POLISHED NETHERRACK
 	public static final Block POLISHED_NETHERRACK = registerBlock("polished_netherrack",
 		new Block(QuiltBlockSettings.copyOf(Blocks.NETHER_BRICKS).strength(2f)));
+	public static final Block POLISHED_NETHERRACK_BRICKS = registerBlock("polished_netherrack_bricks",
+		new Block(QuiltBlockSettings.copyOf(POLISHED_NETHERRACK)));
 	public static final Block POLISHED_NETHERRACK_SLAB = registerBlock("polished_netherrack_slab",
 		new SlabBlock(QuiltBlockSettings.copyOf(ModBlocks.POLISHED_NETHERRACK)));
 	public static final Block POLISHED_NETHERRACK_STAIRS = registerBlock("polished_netherrack_stairs",
@@ -93,6 +96,102 @@ public class ModBlocks {
 		new CopperRailBlock(QuiltBlockSettings.copyOf(Blocks.RAIL).sounds(BlockSoundGroup.COPPER)));
 	public static final Block WOODEN_RAIL = registerBlock("wooden_rail",
 		new RailBlock(QuiltBlockSettings.copyOf(Blocks.RAIL).hardness(0.7F).strength(0.4F).sounds(BlockSoundGroup.WOOD)));
+	public static final Block APRICOT_WOOL = registerBlock("apricot_wool",
+		new Block(QuiltBlockSettings.copyOf(Blocks.WHITE_WOOL)));
+	public static final Block CRIMSON_WOOL = registerBlock("crimson_wool",
+		new Block(QuiltBlockSettings.copyOf(Blocks.WHITE_WOOL)));
+	public static final Block ORCHID_WOOL = registerBlock("orchid_wool",
+		new Block(QuiltBlockSettings.copyOf(Blocks.WHITE_WOOL)));
+	public static final Block SPRING_GREEN_WOOL = registerBlock("spring_green_wool",
+		new Block(QuiltBlockSettings.copyOf(Blocks.WHITE_WOOL)));
+	public static final Block SKY_WOOL = registerBlock("sky_wool",
+		new Block(QuiltBlockSettings.copyOf(Blocks.WHITE_WOOL)));
+	public static final Block CHARTREUSE_WOOL = registerBlock("chartreuse_wool",
+		new Block(QuiltBlockSettings.copyOf(Blocks.WHITE_WOOL)));
+	public static final Block APRICOT_CARPET = registerBlock("apricot_carpet",
+		new CarpetBlock(QuiltBlockSettings.copyOf(Blocks.WHITE_CARPET)));
+	public static final Block CRIMSON_CARPET = registerBlock("crimson_carpet",
+		new CarpetBlock(QuiltBlockSettings.copyOf(Blocks.WHITE_CARPET)));
+	public static final Block ORCHID_CARPET = registerBlock("orchid_carpet",
+		new CarpetBlock(QuiltBlockSettings.copyOf(Blocks.WHITE_CARPET)));
+	public static final Block SPRING_GREEN_CARPET = registerBlock("spring_green_carpet",
+		new CarpetBlock(QuiltBlockSettings.copyOf(Blocks.WHITE_CARPET)));
+	public static final Block SKY_CARPET = registerBlock("sky_carpet",
+		new CarpetBlock(QuiltBlockSettings.copyOf(Blocks.WHITE_CARPET)));
+	public static final Block CHARTREUSE_CARPET = registerBlock("chartreuse_carpet",
+		new CarpetBlock(QuiltBlockSettings.copyOf(Blocks.WHITE_CARPET)));
+	public static final Block APRICOT_TERRACOTTA = registerBlock("apricot_terracotta",
+		new Block(QuiltBlockSettings.copyOf(Blocks.TERRACOTTA)));
+	public static final Block CRIMSON_TERRACOTTA = registerBlock("crimson_terracotta",
+		new Block(QuiltBlockSettings.copyOf(Blocks.TERRACOTTA)));
+	public static final Block ORCHID_TERRACOTTA = registerBlock("orchid_terracotta",
+		new Block(QuiltBlockSettings.copyOf(Blocks.TERRACOTTA)));
+	public static final Block SPRING_GREEN_TERRACOTTA = registerBlock("spring_green_terracotta",
+		new Block(QuiltBlockSettings.copyOf(Blocks.TERRACOTTA)));
+	public static final Block SKY_TERRACOTTA = registerBlock("sky_terracotta",
+		new Block(QuiltBlockSettings.copyOf(Blocks.TERRACOTTA)));
+	public static final Block CHARTREUSE_TERRACOTTA = registerBlock("chartreuse_terracotta",
+		new Block(QuiltBlockSettings.copyOf(Blocks.TERRACOTTA)));
+	public static final Block APRICOT_GLAZED_TERRACOTTA = registerBlock("apricot_glazed_terracotta",
+		new GlazedTerracottaBlock(QuiltBlockSettings.copyOf(Blocks.WHITE_GLAZED_TERRACOTTA)));
+	public static final Block CRIMSON_GLAZED_TERRACOTTA = registerBlock("crimson_glazed_terracotta",
+		new GlazedTerracottaBlock(QuiltBlockSettings.copyOf(Blocks.WHITE_GLAZED_TERRACOTTA)));
+	public static final Block ORCHID_GLAZED_TERRACOTTA = registerBlock("orchid_glazed_terracotta",
+		new GlazedTerracottaBlock(QuiltBlockSettings.copyOf(Blocks.WHITE_GLAZED_TERRACOTTA)));
+	public static final Block SPRING_GREEN_GLAZED_TERRACOTTA = registerBlock("spring_green_glazed_terracotta",
+		new GlazedTerracottaBlock(QuiltBlockSettings.copyOf(Blocks.WHITE_GLAZED_TERRACOTTA)));
+	public static final Block SKY_GLAZED_TERRACOTTA = registerBlock("sky_glazed_terracotta",
+		new GlazedTerracottaBlock(QuiltBlockSettings.copyOf(Blocks.WHITE_GLAZED_TERRACOTTA)));
+	public static final Block CHARTREUSE_GLAZED_TERRACOTTA = registerBlock("chartreuse_glazed_terracotta",
+		new GlazedTerracottaBlock(QuiltBlockSettings.copyOf(Blocks.WHITE_GLAZED_TERRACOTTA)));
+	public static final Block APRICOT_STAINED_GLASS = registerBlock("apricot_stained_glass",
+		new StainedGlassBlock(DyeColor.WHITE, QuiltBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS)));
+	public static final Block CRIMSON_STAINED_GLASS = registerBlock("crimson_stained_glass",
+		new StainedGlassBlock(DyeColor.WHITE, QuiltBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS)));
+	public static final Block ORCHID_STAINED_GLASS = registerBlock("orchid_stained_glass",
+		new StainedGlassBlock(DyeColor.WHITE, QuiltBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS)));
+	public static final Block SPRING_GREEN_STAINED_GLASS = registerBlock("spring_green_stained_glass",
+		new StainedGlassBlock(DyeColor.WHITE, QuiltBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS)));
+	public static final Block SKY_STAINED_GLASS = registerBlock("sky_stained_glass",
+		new StainedGlassBlock(DyeColor.WHITE, QuiltBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS)));
+	public static final Block CHARTREUSE_STAINED_GLASS = registerBlock("chartreuse_stained_glass",
+		new StainedGlassBlock(DyeColor.WHITE, QuiltBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS)));
+	public static final Block APRICOT_STAINED_GLASS_PANE = registerBlock("apricot_stained_glass_pane",
+		new StainedGlassPaneBlock(DyeColor.WHITE, QuiltBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS_PANE)));
+	public static final Block CRIMSON_STAINED_GLASS_PANE = registerBlock("crimson_stained_glass_pane",
+		new StainedGlassPaneBlock(DyeColor.WHITE, QuiltBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS_PANE)));
+	public static final Block ORCHID_STAINED_GLASS_PANE = registerBlock("orchid_stained_glass_pane",
+		new StainedGlassPaneBlock(DyeColor.WHITE, QuiltBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS_PANE)));
+	public static final Block SPRING_GREEN_STAINED_GLASS_PANE = registerBlock("spring_green_stained_glass_pane",
+		new StainedGlassPaneBlock(DyeColor.WHITE, QuiltBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS_PANE)));
+	public static final Block SKY_STAINED_GLASS_PANE = registerBlock("sky_stained_glass_pane",
+		new StainedGlassPaneBlock(DyeColor.WHITE, QuiltBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS_PANE)));
+	public static final Block CHARTREUSE_STAINED_GLASS_PANE = registerBlock("chartreuse_stained_glass_pane",
+		new StainedGlassPaneBlock(DyeColor.WHITE, QuiltBlockSettings.copyOf(Blocks.WHITE_STAINED_GLASS_PANE)));
+	public static final Block APRICOT_CONCRETE = registerBlock("apricot_concrete",
+		new Block(QuiltBlockSettings.copyOf(Blocks.WHITE_CONCRETE)));
+	public static final Block CRIMSON_CONCRETE = registerBlock("crimson_concrete",
+		new Block(QuiltBlockSettings.copyOf(Blocks.WHITE_CONCRETE)));
+	public static final Block ORCHID_CONCRETE = registerBlock("orchid_concrete",
+		new Block(QuiltBlockSettings.copyOf(Blocks.WHITE_CONCRETE)));
+	public static final Block SPRING_GREEN_CONCRETE = registerBlock("spring_green_concrete",
+		new Block(QuiltBlockSettings.copyOf(Blocks.WHITE_CONCRETE)));
+	public static final Block SKY_CONCRETE = registerBlock("sky_concrete",
+		new Block(QuiltBlockSettings.copyOf(Blocks.WHITE_CONCRETE)));
+	public static final Block CHARTREUSE_CONCRETE = registerBlock("chartreuse_concrete",
+		new Block(QuiltBlockSettings.copyOf(Blocks.WHITE_CONCRETE)));
+	public static final Block APRICOT_CONCRETE_POWDER = registerBlock("apricot_concrete_powder",
+		new ConcretePowderBlock(APRICOT_CONCRETE, QuiltBlockSettings.copyOf(Blocks.WHITE_CONCRETE_POWDER)));
+	public static final Block CRIMSON_CONCRETE_POWDER = registerBlock("crimson_concrete_powder",
+		new ConcretePowderBlock(CRIMSON_CONCRETE, QuiltBlockSettings.copyOf(Blocks.WHITE_CONCRETE_POWDER)));
+	public static final Block ORCHID_CONCRETE_POWDER = registerBlock("orchid_concrete_powder",
+		new ConcretePowderBlock(ORCHID_CONCRETE, QuiltBlockSettings.copyOf(Blocks.WHITE_CONCRETE_POWDER)));
+	public static final Block SPRING_GREEN_CONCRETE_POWDER = registerBlock("spring_green_concrete_powder",
+		new ConcretePowderBlock(SPRING_GREEN_CONCRETE, QuiltBlockSettings.copyOf(Blocks.WHITE_CONCRETE_POWDER)));
+	public static final Block SKY_CONCRETE_POWDER = registerBlock("sky_concrete_powder",
+		new ConcretePowderBlock(SKY_CONCRETE, QuiltBlockSettings.copyOf(Blocks.WHITE_CONCRETE_POWDER)));
+	public static final Block CHARTREUSE_CONCRETE_POWDER = registerBlock("chartreuse_concrete_powder",
+		new ConcretePowderBlock(CHARTREUSE_CONCRETE, QuiltBlockSettings.copyOf(Blocks.WHITE_CONCRETE_POWDER)));
 
 	private static Block registerBlock(String name, Block block) {
 		registerBlockItem(name, block);
@@ -120,6 +219,12 @@ public class ModBlocks {
 			entries.addAfter(CUT_STONE_BRICKS,SMALL_STONE_BRICKS);
 			entries.addAfter(SMALL_STONE_BRICKS,TRIPLE_STONE_BRICKS);
 
+			entries.addAfter(Blocks.NETHERRACK,POLISHED_NETHERRACK);
+			entries.addAfter(POLISHED_NETHERRACK,POLISHED_NETHERRACK_BRICKS);
+			entries.addAfter(POLISHED_NETHERRACK_BRICKS,LAYERED_POLISHED_NETHERRACK);
+			entries.addAfter(LAYERED_POLISHED_NETHERRACK,CUT_POLISHED_NETHERRACK);
+			entries.addAfter(CUT_POLISHED_NETHERRACK,POLISHED_NETHERRACK_PILLAR);
+
 			entries.addAfter(Blocks.POLISHED_ANDESITE_SLAB,POLISHED_ANDESITE_WALL);
 			entries.addAfter(POLISHED_ANDESITE_WALL,CRACKED_POLISHED_ANDESITE);
 
@@ -128,6 +233,62 @@ public class ModBlocks {
 
 			entries.addAfter(Blocks.POLISHED_GRANITE_SLAB,POLISHED_GRANITE_WALL);
 			entries.addAfter(POLISHED_GRANITE_WALL,CRACKED_POLISHED_GRANITE);
+		});
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(entries -> {
+			entries.addAfter(Blocks.ORANGE_WOOL,APRICOT_WOOL);
+			entries.addBefore(Blocks.RED_WOOL,CRIMSON_WOOL);
+			entries.addAfter(Blocks.PURPLE_WOOL,ORCHID_WOOL);
+			entries.addAfter(Blocks.LIGHT_BLUE_WOOL,SKY_WOOL);
+			entries.addAfter(Blocks.GREEN_WOOL,SPRING_GREEN_WOOL);
+			entries.addBefore(Blocks.LIME_WOOL,CHARTREUSE_WOOL);
+
+			entries.addAfter(Blocks.ORANGE_CARPET,APRICOT_CARPET);
+			entries.addBefore(Blocks.RED_CARPET,CRIMSON_CARPET);
+			entries.addAfter(Blocks.PURPLE_CARPET,ORCHID_CARPET);
+			entries.addAfter(Blocks.LIGHT_BLUE_CARPET,SKY_CARPET);
+			entries.addAfter(Blocks.GREEN_CARPET,SPRING_GREEN_CARPET);
+			entries.addBefore(Blocks.LIME_CARPET,CHARTREUSE_CARPET);
+
+			entries.addAfter(Blocks.ORANGE_TERRACOTTA,APRICOT_TERRACOTTA);
+			entries.addBefore(Blocks.RED_TERRACOTTA,CRIMSON_TERRACOTTA);
+			entries.addAfter(Blocks.PURPLE_TERRACOTTA,ORCHID_TERRACOTTA);
+			entries.addAfter(Blocks.LIGHT_BLUE_TERRACOTTA,SKY_TERRACOTTA);
+			entries.addAfter(Blocks.GREEN_TERRACOTTA,SPRING_GREEN_TERRACOTTA);
+			entries.addBefore(Blocks.LIME_TERRACOTTA,CHARTREUSE_TERRACOTTA);
+
+			entries.addAfter(Blocks.ORANGE_GLAZED_TERRACOTTA,APRICOT_GLAZED_TERRACOTTA);
+			entries.addBefore(Blocks.RED_GLAZED_TERRACOTTA,CRIMSON_GLAZED_TERRACOTTA);
+			entries.addAfter(Blocks.PURPLE_GLAZED_TERRACOTTA,ORCHID_GLAZED_TERRACOTTA);
+			entries.addAfter(Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA,SKY_GLAZED_TERRACOTTA);
+			entries.addAfter(Blocks.GREEN_GLAZED_TERRACOTTA,SPRING_GREEN_GLAZED_TERRACOTTA);
+			entries.addBefore(Blocks.LIME_GLAZED_TERRACOTTA,CHARTREUSE_GLAZED_TERRACOTTA);
+
+			entries.addAfter(Blocks.ORANGE_CONCRETE,APRICOT_CONCRETE);
+			entries.addBefore(Blocks.RED_CONCRETE,CRIMSON_CONCRETE);
+			entries.addAfter(Blocks.PURPLE_CONCRETE,ORCHID_CONCRETE);
+			entries.addAfter(Blocks.LIGHT_BLUE_CONCRETE,SKY_CONCRETE);
+			entries.addAfter(Blocks.GREEN_CONCRETE,SPRING_GREEN_CONCRETE);
+			entries.addBefore(Blocks.LIME_CONCRETE,CHARTREUSE_CONCRETE);
+
+			entries.addAfter(Blocks.ORANGE_CONCRETE_POWDER,APRICOT_CONCRETE_POWDER);
+			entries.addBefore(Blocks.RED_CONCRETE_POWDER,CRIMSON_CONCRETE_POWDER);
+			entries.addAfter(Blocks.PURPLE_CONCRETE_POWDER,ORCHID_CONCRETE_POWDER);
+			entries.addAfter(Blocks.LIGHT_BLUE_CONCRETE_POWDER,SKY_CONCRETE_POWDER);
+			entries.addAfter(Blocks.GREEN_CONCRETE_POWDER,SPRING_GREEN_CONCRETE_POWDER);
+			entries.addBefore(Blocks.LIME_CONCRETE_POWDER,CHARTREUSE_CONCRETE_POWDER);
+
+			entries.addAfter(Blocks.ORANGE_STAINED_GLASS,APRICOT_STAINED_GLASS);
+			entries.addBefore(Blocks.RED_STAINED_GLASS,CRIMSON_STAINED_GLASS);
+			entries.addAfter(Blocks.PURPLE_STAINED_GLASS,ORCHID_STAINED_GLASS);
+			entries.addAfter(Blocks.LIGHT_BLUE_STAINED_GLASS,SKY_STAINED_GLASS);
+			entries.addAfter(Blocks.GREEN_STAINED_GLASS,SPRING_GREEN_STAINED_GLASS);
+			entries.addBefore(Blocks.LIME_STAINED_GLASS,CHARTREUSE_STAINED_GLASS);
+			entries.addAfter(Blocks.ORANGE_STAINED_GLASS_PANE,APRICOT_STAINED_GLASS_PANE);
+			entries.addBefore(Blocks.RED_STAINED_GLASS_PANE,CRIMSON_STAINED_GLASS_PANE);
+			entries.addAfter(Blocks.PURPLE_STAINED_GLASS_PANE,ORCHID_STAINED_GLASS_PANE);
+			entries.addAfter(Blocks.LIGHT_BLUE_STAINED_GLASS_PANE,SKY_STAINED_GLASS_PANE);
+			entries.addAfter(Blocks.GREEN_STAINED_GLASS_PANE,SPRING_GREEN_STAINED_GLASS_PANE);
+			entries.addBefore(Blocks.LIME_STAINED_GLASS_PANE,CHARTREUSE_STAINED_GLASS_PANE);
 		});
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL_BLOCKS).register(entries -> {
 			entries.addAfter(Blocks.COARSE_DIRT,ROCKY_DIRT);

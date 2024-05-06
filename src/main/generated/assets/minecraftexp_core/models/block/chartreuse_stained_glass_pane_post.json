@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_post",
+  "textures": {
+    "edge": "minecraftexp_core:block/chartreuse_stained_glass_pane_top",
+    "pane": "minecraftexp_core:block/chartreuse_stained_glass"
+  }
+}
