@@ -1,5 +1,6 @@
 package io.github.nekonesse.minecraftexp_core.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.block.AbstractRailBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -16,6 +17,11 @@ public class CopperRailBlock extends AbstractRailBlock {
 		this.setDefaultState(this.stateManager.getDefaultState().with(SHAPE, RailShape.NORTH_SOUTH).with(WATERLOGGED, Boolean.valueOf(false)));
 	}
 	public static final EnumProperty<RailShape> SHAPE = Properties.STRAIGHT_RAIL_SHAPE;
+
+	@Override
+	protected MapCodec<? extends AbstractRailBlock> getCodec() {
+		return null;
+	}
 
 	@Override
 	public Property<RailShape> getShapeProperty() {

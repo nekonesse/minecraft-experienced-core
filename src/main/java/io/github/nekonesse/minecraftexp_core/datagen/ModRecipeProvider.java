@@ -3,7 +3,7 @@ package io.github.nekonesse.minecraftexp_core.datagen;
 import io.github.nekonesse.minecraftexp_core.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.BundleRecipesProvider;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.RecipeCategory;
 
@@ -18,7 +18,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 	}
 
 	@Override
-	public void generateRecipes(Consumer<RecipeJsonProvider> exporter) {
+	public void generateRecipes(Consumer<BundleRecipesProvider> exporter) {
 		//offerSmelting(exporter, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY,
 		//	0.7f, 200, "ruby");
 		//offerBlasting(exporter, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY,

@@ -37,7 +37,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
 		getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL);
 
-		getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier("fabric", "needs_tool_level_4")));
+		getOrCreateTagBuilder(TagKey.of(RegistryKeys.BLOCK, new Identifier.Serializer("fabric", "needs_tool_level_4")));
 
 		getOrCreateTagBuilder(BlockTags.WALLS)
 			.add(ModBlocks.POLISHED_ANDESITE_WALL)
