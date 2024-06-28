@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "minecraftexp_core:block/stripped_latewood_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "minecraftexp_core:block/stripped_latewood_log"
+    },
+    "axis=z": {
+      "model": "minecraftexp_core:block/stripped_latewood_log_horizontal",
+      "x": 90
+    }
+  }
+}

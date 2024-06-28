@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "minecraftexp_core:block/latewood_log",
+    "side": "minecraftexp_core:block/latewood_log"
+  }
+}

@@ -83,6 +83,6 @@ public class FireArrowEntity extends PersistentProjectileEntity {
 
 	@Override
 	protected ItemStack asItemStack() {
-		return new ItemStack(ModItems.FIRE_ARROW_ITEM);
+		return new ItemStack(ModItems.COPPER_WRENCH);
 	}
 }

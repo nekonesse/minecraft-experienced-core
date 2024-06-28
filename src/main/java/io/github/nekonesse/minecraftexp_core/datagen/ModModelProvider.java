@@ -80,6 +80,10 @@ public class ModModelProvider extends FabricModelProvider {
 		blockStateModelGenerator.registerGlassPane(ModBlocks.CHARTREUSE_STAINED_GLASS, ModBlocks.CHARTREUSE_STAINED_GLASS_PANE);
 
 		blockStateModelGenerator.registerSouthDefaultHorizontalFacing(TexturedModel.TEMPLATE_GLAZED_TERRACOTTA, ModBlocks.APRICOT_GLAZED_TERRACOTTA , ModBlocks.CRIMSON_GLAZED_TERRACOTTA, ModBlocks.ORCHID_GLAZED_TERRACOTTA, ModBlocks.SPRING_GREEN_GLAZED_TERRACOTTA, ModBlocks.SKY_GLAZED_TERRACOTTA, ModBlocks.CHARTREUSE_GLAZED_TERRACOTTA);
+
+		blockStateModelGenerator.registerLog(ModBlocks.LATEWOOD_LOG).log(ModBlocks.LATEWOOD_LOG).wood(ModBlocks.LATEWOOD_WOOD);
+		blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_LATEWOOD_LOG).log(ModBlocks.STRIPPED_LATEWOOD_LOG).wood(ModBlocks.STRIPPED_LATEWOOD_WOOD);
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LATEWOOD_PLANKS);
 	}
 
 	@Override
@@ -87,7 +91,7 @@ public class ModModelProvider extends FabricModelProvider {
 		itemModelGenerator.register(ModItems.COPPER_NUGGET, Models.SINGLE_LAYER_ITEM);
 		itemModelGenerator.register(ModItems.COPPER_WRENCH, Models.SINGLE_LAYER_ITEM);
 
-		itemModelGenerator.register(ModItems.FIRE_ARROW_ITEM, Models.SINGLE_LAYER_ITEM);
+		//itemModelGenerator.register(ModItems.FIRE_ARROW_ITEM, Models.SINGLE_LAYER_ITEM);
 
 		itemModelGenerator.register(ModItems.APRICOT_DYE, Models.SINGLE_LAYER_ITEM);
 		itemModelGenerator.register(ModItems.CRIMSON_DYE, Models.SINGLE_LAYER_ITEM);

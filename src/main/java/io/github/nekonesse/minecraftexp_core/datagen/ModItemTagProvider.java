@@ -17,7 +17,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
 	@Override
 	protected void configure(HolderLookup.Provider arg) {
-		getOrCreateTagBuilder(ItemTags.ARROWS)
-			.add(ModItems.FIRE_ARROW_ITEM);
+		//getOrCreateTagBuilder(ItemTags.ARROWS)
+			//.add(ModItems.FIRE_ARROW_ITEM);
 	}
 }

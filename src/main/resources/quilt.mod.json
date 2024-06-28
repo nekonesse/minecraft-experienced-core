@@ -34,10 +34,6 @@
 				"versions": ">=7.0.2"
 			},
 			{
-				"id": "gelatin",
-				"versions": ">=1.1.2+1.20.1"
-			},
-			{
 				"id": "minecraft",
 				"versions": ">=1.20"
 			}

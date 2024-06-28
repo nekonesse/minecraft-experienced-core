@@ -195,8 +195,17 @@ public class ModBlocks {
 		new ConcretePowderBlock(SKY_CONCRETE, QuiltBlockSettings.copyOf(Blocks.WHITE_CONCRETE_POWDER)));
 	public static final Block CHARTREUSE_CONCRETE_POWDER = registerBlock("chartreuse_concrete_powder",
 		new ConcretePowderBlock(CHARTREUSE_CONCRETE, QuiltBlockSettings.copyOf(Blocks.WHITE_CONCRETE_POWDER)));
-	public static final Block ITEM_CUBBY = registerBlock("item_cubby",
-		new ItemCubbyBlock(QuiltBlockSettings.copyOf(Blocks.OAK_PLANKS).pistonBehavior(PistonBehavior.DESTROY)));
+
+	public static final Block LATEWOOD_LOG = registerBlock("latewood_log",
+		new PillarBlock(QuiltBlockSettings.copyOf(Blocks.OAK_LOG)));
+	public static final Block LATEWOOD_WOOD = registerBlock("latewood_wood",
+		new PillarBlock(QuiltBlockSettings.copyOf(Blocks.OAK_WOOD)));
+	public static final Block STRIPPED_LATEWOOD_LOG = registerBlock("stripped_latewood_log",
+		new PillarBlock(QuiltBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)));
+	public static final Block STRIPPED_LATEWOOD_WOOD = registerBlock("stripped_latewood_wood",
+		new PillarBlock(QuiltBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD)));
+	public static final Block LATEWOOD_PLANKS = registerBlock("latewood_planks",
+		new Block(QuiltBlockSettings.copyOf(Blocks.OAK_PLANKS)));
 
 	private static Block registerBlock(String name, Block block) {
 		registerBlockItem(name, block);
@@ -207,7 +216,6 @@ public class ModBlocks {
 		return Registry.register(Registries.ITEM, new Identifier(MinecraftExp_Core.MOD_ID, name),
 			new BlockItem(block, new QuiltItemSettings()));
 	}
-
 
 	private static void registerTabs() {
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
@@ -223,6 +231,12 @@ public class ModBlocks {
 			entries.addAfter(STACKED_STONE_BRICKS,CUT_STONE_BRICKS);
 			entries.addAfter(CUT_STONE_BRICKS,SMALL_STONE_BRICKS);
 			entries.addAfter(SMALL_STONE_BRICKS,TRIPLE_STONE_BRICKS);
+
+			entries.addAfter(Blocks.CHERRY_BUTTON,LATEWOOD_LOG);
+			entries.addAfter(LATEWOOD_LOG,LATEWOOD_WOOD);
+			entries.addAfter(LATEWOOD_WOOD,STRIPPED_LATEWOOD_LOG);
+			entries.addAfter(STRIPPED_LATEWOOD_LOG,STRIPPED_LATEWOOD_WOOD);
+			entries.addAfter(STRIPPED_LATEWOOD_WOOD,LATEWOOD_PLANKS);
 
 			entries.addAfter(Blocks.NETHERRACK,POLISHED_NETHERRACK);
 			entries.addAfter(POLISHED_NETHERRACK,POLISHED_NETHERRACK_BRICKS);
@@ -297,6 +311,8 @@ public class ModBlocks {
 		});
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL_BLOCKS).register(entries -> {
 			entries.addAfter(Blocks.COARSE_DIRT,ROCKY_DIRT);
+
+			entries.addAfter(Blocks.CHERRY_LOG,LATEWOOD_LOG);
 		});
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE_BLOCKS).register(entries -> {
 			entries.addBefore(Blocks.RAIL,WOODEN_RAIL);
